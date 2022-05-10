@@ -38,21 +38,21 @@ class Registrar : AppCompatActivity() {
                 if (correo_r.isEmpty() || contraseña_r.isEmpty() || confirmar.isEmpty()) {
                     throw Exception("los campos no pueden estar vacios!")
                 } else {
-                    if (contraseñas_iguales(contraseña_r, contraseña_r)) {
+                    if (contraseñas_iguales(contraseña_r, confirmar)) {
                             auth.createUserWithEmailAndPassword(correo_r,contraseña_r)
                                 .addOnCompleteListener(this) { task ->
                                     if (task.isSuccessful) {
                                         // Sign in success, update UI with the signed-in user's information
                                         Toast.makeText(baseContext, "Usuario Creado",
                                             Toast.LENGTH_SHORT).show()
-                                        Log.d(TAG, "signInWithCustomToken:success")
+                                        Log.d(TAG, "signInWithCustomToken:success")// imprimir en la terminal
                                         //val user = auth.currentUser
 
                                     } else {
                                         // If sign in fails, display a message to the user.
-                                        Log.w(TAG, "signInWithCustomToken:failure", task.exception)
-                                        Toast.makeText(baseContext, "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show()
+                                        Log.w(TAG, "signInWithCustomToken:failure", task.exception)//terminal
+                                        Toast.makeText(baseContext, "No se pudo registrar el usuario",
+                                            Toast.LENGTH_SHORT).show()//celular
                                     }
                                 }
 
