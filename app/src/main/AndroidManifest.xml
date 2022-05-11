@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Biblioteca">
         <activity
+            android:name=".lista_libros"
+            android:exported="false" />
+        <activity
             android:name=".Crear_libros"
             android:exported="false" />
         <activity
