@@ -64,5 +64,12 @@
             android:backgroundTint="#009688"
             android:text="Ver Libros" />
 
+        <Button
+            android:id="@+id/bn_crear_libro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009688"
+            android:text="Crear libro" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
