@@ -6,4 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".leer_libro">
 
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdf_viewer"
+        android:layout_width="394dp"
+        android:layout_height="709dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="197dp"
+            android:layout_height="157dp"
+            android:layout_centerInParent="true" />
+    </com.github.barteksc.pdfviewer.PDFView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
